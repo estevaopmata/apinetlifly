@@ -121,7 +121,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
     loading.style.display = 'block'; // Mostrar carregando
 
     // Faz uma requisição à API de Rick and Morty
-    fetch('https://rickandmortyapi.com/api/character/?name=${characterName}')
+    fetch(`https://rickandmortyapi.com/api/character/?name=${characterName}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Personagem não encontrado');
